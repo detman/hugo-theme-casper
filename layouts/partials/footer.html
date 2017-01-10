@@ -11,5 +11,8 @@
     {{ if .Site.Params.customFooterPartial }}
         {{ partial .Site.Params.customFooterPartial . }}
     {{ end }}
+    {{ if .Params.customfooterpartial }}
+        {{ partial .Params.customfooterpartial . }}
+    {{ end }}
 </body>
 </html>

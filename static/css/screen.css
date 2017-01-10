@@ -925,11 +925,18 @@ body.nav-opened .menu-button .word {
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
+
+    background-color: #f6f6f6; 
+    background: -webkit-linear-gradient(top, #f6f6f6,#ffffff); 
+    padding: 20px; 
+    border-left: 0.5px solid #e0e0e0; 
+    border-top: 0.5px solid #e0e0e0;
+
     position: relative;
     width: 80%;
     max-width: 710px;
     margin: 4rem auto;
-    padding-bottom: 4rem;
+    /* padding-bottom: 4rem; */
     border-bottom: #EBF2F6 1px solid;
     word-wrap: break-word;
     -moz-hyphens: auto;
@@ -1007,12 +1014,21 @@ body:not(.post-template) .post-title {
 
 .post-date {
     display: inline-block;
+    /*
     margin-left: 8px;
     padding-left: 12px;
-    border-left: #d5dbde 1px solid;
+    */
+    /* border-left: #d5dbde 1px solid; */
     text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;
+}
+
+.post-teaser {
+    width: 200px;
+    float: left; 
+    position: relative; 
+    left: -20px;
 }
 
 .user-image {
@@ -1684,6 +1700,13 @@ body:not(.post-template) .post-title {
         line-height: 1.65em;
     }
 
+    .post-teaser {
+        width: 100%;
+        float: top; 
+        position: relative; 
+        left: 0px;
+    }
+
     .post-date {
         display: none;
     }
@@ -1767,6 +1790,7 @@ body:not(.post-template) .post-title {
         min-width: 0;
         max-width: 112%; /* fallback when calc doesn't work */
     }
+
 
     .post-meta {
         font-size: 1.3rem;
