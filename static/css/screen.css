@@ -1015,6 +1015,15 @@ body:not(.post-template) .post-title {
     min-height: 77px;
 }
 
+.post-related a {
+    color: #000000;
+    text-decoration: none;
+}
+.post-related .post-tag a {
+    color: #9EABB3;
+    text-decoration: none;
+}
+
 .post-date {
     display: inline-block;
     /*
