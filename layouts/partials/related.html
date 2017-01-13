@@ -1,0 +1,21 @@
+<section class="post-meta">
+<h3>Weitere Beiträge zum Thema</h3>
+<ul class="post-related">
+    {{ $page_link := .Permalink }}
+    {{ $tags := .Params.tags }}
+    {{ range .Site.Pages }}
+        {{ $page := . }}
+        {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+        {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
+            <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+            <span class="post-tag small">
+            {{ range $index, $tag := .Params.tags }}
+                <a href="{{ $.Site.BaseURL }}/tags/{{ $tag | urlize }}/">#{{ $tag }}</a>
+            {{ end }}
+            </span>
+            <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+            </li>
+        {{ end }}
+    {{ end }}
+</ul>
+</section>
